@@ -452,14 +452,30 @@ nav ul li a {
 }
 
 @media screen and (max-width: 768px) {
-    #home,
-    .about-grid {
+    #home {
+        display: grid;
         grid-template-columns: 1fr;
+        gap: 2rem;
+        min-height: auto;
     }
 
     .herro-left,
     .hero-right {
-        grid-column: auto;
+        grid-column: 1;
+        grid-row: auto;
+        width: 100%;
+    }
+
+    .herro-left {
+        order: 1;
+    }
+
+    .hero-right {
+        order: 2;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
     }
 
     #skills,
