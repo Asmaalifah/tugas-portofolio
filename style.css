@@ -452,13 +452,19 @@ nav ul li a {
 }
 
 @media screen and (max-width: 768px) {
+    #home,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .herro-left,
+    .hero-right {
+        grid-column: auto;
+    }
+
     #skills,
     .project-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
     }
 }
 
